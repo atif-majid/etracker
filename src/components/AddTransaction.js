@@ -1,5 +1,6 @@
 import React, {useState, useContext} from 'react';
 import { GlobalContext } from '../context/GlobalState';
+import { getCurrentDate } from './Utils';
 
 export const AddTransaction = () => {
 
@@ -11,10 +12,12 @@ export const AddTransaction = () => {
         const newTransaction = {
             id: Math.floor(Math.random() * 100000000),
             text,
-            amount: +amount
+            amount: +amount,
+            DateAdded: getCurrentDate("-")
         }
-
         addTransaction(newTransaction);
+        setText('');
+        setAmount(0);
     }
 
     return (
