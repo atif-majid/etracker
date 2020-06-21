@@ -15,7 +15,7 @@ jobs:
         with:
           node-version: 14.4
       #install yarn
-      - uses: borales/actions-yarn@v2.0.0
+      - uses: borales/actions-yarn@v2.3.0
         with:
           cmd: install # will run 'yarn install' command and try again
         
